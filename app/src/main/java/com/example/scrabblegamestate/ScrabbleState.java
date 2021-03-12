@@ -1,3 +1,9 @@
+/**
+ * @author Tamsen Dean
+ * @author Anabel Hilerio
+ * @author Alec Uyematsu
+ * @author Samone Watkins
+ */
 package com.example.scrabblegamestate;
 
 import java.util.Random;
@@ -36,15 +42,16 @@ public class ScrabbleState {
                 Random rnd = new Random();
                 char randomChar1 = (char) ('a' + rnd.nextInt(26));
                 char randomChar2 = (char) ('a' + rnd.nextInt(26));
-                //creating SrabbleLetters
+
+                //creating ScrabbleLetters
                 player1Hand[i] = new ScrabbleLetter(randomChar1);
                 player2Hand[i] = new ScrabbleLetter(randomChar2);
             }
 
+            //creating a random pool of all of the letter tiles
             for(int i = 0; i < 100; i++){
                 Random rnd = new Random();
                 char randomChar = (char) ('a' + rnd.nextInt(26));
-                //doing random pool for now we can change how many of each letters we want later
                 pool[i] = new ScrabbleLetter(randomChar);
             }
 
@@ -55,7 +62,7 @@ public class ScrabbleState {
 
         }
 
-        //deep copy
+        //Deep copy of the given Scrabble State
         public ScrabbleState(ScrabbleState scrabbleStateCopy){
             this.playerToMove = scrabbleStateCopy.playerToMove;
             this.gamePause = scrabbleStateCopy.gamePause;
@@ -67,10 +74,15 @@ public class ScrabbleState {
 
         @Override
         public String toString(){
+
+            //the string to return
             String output;
+
+            //print if the game is paused and who's move it is
             output = "\ngame pause: " + this.gamePause + "\n";
             output += "player to move: " + this.playerToMove + "\n";
 
+            //adding the board to the string
             output += "board: The board is empty";
             for(int i = 0; i < 15; i++) {
                 for (int j = 0; j < 15; j++) {
@@ -79,18 +91,21 @@ public class ScrabbleState {
             }
             output += "\n";
 
+            //adding the pool to the string
             output += "pool: \n";
             for(int i = 0; i < 100; i++){
                 output += this.pool[i].getLetter() + " ";
             }
             output += "\n";
 
+            //adding the hand to the string
             output += "player one hand: \n";
             for(int i = 0; i < 7; i++){
                 output += this.player1Hand[i].getLetter() + " ";
             }
             output += "\n";
 
+            //adding player 2's hand if it's not null
             if(this.player2Hand != null) {
                 output += "player two hand: \n";
                 for (int i = 0; i < 7; i++) {
@@ -110,7 +125,6 @@ public class ScrabbleState {
          */
 
         public boolean isLegal(ScrabbleState scrabbleState){
-            //code to determine if action is legal
             return true;
         }
 

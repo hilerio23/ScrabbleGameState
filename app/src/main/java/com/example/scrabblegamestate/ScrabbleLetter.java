@@ -1,3 +1,10 @@
+/**
+ *
+ * @author Tamsen Dean
+ * @author Anabel Hilerio
+ * @author Alec Uyematsu
+ * @author Samone Watkins
+ */
 package com.example.scrabblegamestate;
 
 public class ScrabbleLetter {
@@ -9,12 +16,14 @@ public class ScrabbleLetter {
         this.letter = myLetter;
     }
 
-    // setter
+    // Setter Methods
     public void setName(char letter) { this.letter = letter; }
+
     public void setPoints(int points) { this.points = points; }
 
-    // getter
+    // Getter methods
     public char getLetter() { return letter; }
+
     public int getPoints(){
         if(this.letter == 'a' || this.letter == 'e' || this.letter == 'i' || this.letter == 'l' || this.letter == 'n' || this.letter == 'o'
                 || this.letter == 'r' || this.letter == 's' || this.letter == 't' ||

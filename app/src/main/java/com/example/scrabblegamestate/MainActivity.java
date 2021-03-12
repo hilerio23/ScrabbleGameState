@@ -1,3 +1,28 @@
+/**
+ *
+ * @author Tamsen Dean
+ * @author Anabel Hilerio
+ * @author Alec Uyematsu
+ * @author Samone Watkins
+ *
+ *
+ * ---------EXTERNAL CITATION--------------
+ * Date: March 10, 2021
+ * Problem: Anabel was having an issue with how to properly use edit text
+ *          NOTE: This citation does belong in activity_main.xml, but won't let me
+ *          comment accordingly.
+ * Source: https://developer.android.com/reference/android/widget/EditText
+ * Solution: Use the Android SDK to figure out how to implement it in the xml file
+ *
+ * -------EXTERNAL CITATION-----------------
+ * Date: March 10, 2021
+ * Problem: Anabel didn't remeber how to append text to the edit text
+ * Source: https://stackoverflow.com/questions/9981334/how-to-append-text-into-an-edit
+ *         text-in-android#:~:text=1%20Answer&text=Just%20use%20append()%20of,the%20en
+ *         d%20of%20the%20Editable.
+ * Solution: use EditText.append() to append the text on screen.
+ *
+ */
 package com.example.scrabblegamestate;
 
 import androidx.appcompat.app.AppCompatActivity;
