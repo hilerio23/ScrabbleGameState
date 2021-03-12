@@ -19,13 +19,19 @@ public class ScrabbleState {
         //array of SrabbleLetters for hand
         private ScrabbleLetter[] player1Hand = new ScrabbleLetter[7];
         private ScrabbleLetter[] player2Hand = new ScrabbleLetter[7];
+        //add players 3 and 4
 
         //array of ScrabbleLetters for Pool (100) total letters
-        private ScrabbleLetter[] pool = new ScrabbleLetter[100];
+        private ScrabbleLetter[] pool = new ScrabbleLetter[100]; //arraylist
 
         //game pause: 1 for pause 0 for playing
         private int gamePause;
 
+        //add score
+
+        //track how full the board is
+
+        //extra variable for tracking if a move is possible
 
         //constructor
         public ScrabbleState(){
@@ -63,6 +69,7 @@ public class ScrabbleState {
         }
 
         //Deep copy of the given Scrabble State
+        //need to copy all the places in the board
         public ScrabbleState(ScrabbleState scrabbleStateCopy){
             this.playerToMove = scrabbleStateCopy.playerToMove;
             this.gamePause = scrabbleStateCopy.gamePause;
@@ -128,6 +135,8 @@ public class ScrabbleState {
             return true;
         }
 
+        //param should be an arraylist of scrabble letters
+        //param which player
         public boolean playWord(ScrabbleState scrabbleState){
             if(isLegal(scrabbleState) == true){
                 return true;
